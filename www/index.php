@@ -15,3 +15,16 @@
 function test($parameter1, $parameter2)
 {
 }
+
+/**
+ * @param boolean $quiet when true 'Hello world' is echo-ed.
+ *
+ * @return void
+ */
+function outputHello($quiet)
+{
+    if ($quiet) {
+        return;
+    }
+    echo 'Hello world';
+}
