@@ -1,0 +1,22 @@
+version: '3'
+
+networks:
+  web:
+    external: true
+
+services:
+
+  #Le serveur php
+  back:
+    image: php:8.0-apache
+    restart: always
+    networks:
+      - web
+    volumes:
+      - ./www/:/var/www/html/:rw
+    container_name: poc-${PROJECT_NAME}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.poc-${PROJECT_NAME}.rule=Host(`poc.${PROJECT_NAME}.${TRAEFIK_DOMAIN}`)"
+      - "traefik.http.routers.poc-${PROJECT_NAME}.entrypoints=web"
+    user: "${UID}:${GID}"
