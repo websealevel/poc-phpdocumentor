@@ -1,5 +1,12 @@
 # poc : phpDocumentor
 
+- [poc : phpDocumentor](#poc--phpdocumentor)
+  - [Pré requis](#pré-requis)
+  - [Lancer le projet](#lancer-le-projet)
+  - [Arrêter le projet](#arrêter-le-projet)
+  - [Générer la documentation](#générer-la-documentation)
+  - [Resources](#resources)
+
 Un poc pour experimenter phpDocumentor, une librairie qui permet de générer de la documentation de manière automatique à partir de commentaires respectant la norme de [PHPDoc](https://docs.phpdoc.org/3.0/guide/references/phpdoc/index.html), en cours de normalisation dans le [PSR-5](https://github.com/phpDocumentor/fig-standards/blob/master/proposed/phpdoc.md) (aka *PHP Stantards Recommandations*) du [FIG](https://www.php-fig.org/) (aka *Framework Interop Group*).
 
 ## Pré requis
@@ -42,4 +49,4 @@ docker run --rm -v $(pwd)/doc:/data phpdoc/phpdoc:3
 - [PHPDoc Reference](https://docs.phpdoc.org/3.0/guide/references/phpdoc/index.html)
 - [Liste des PSRs](https://www.php-fig.org/psr/)
 - [Image officielle de phpDocumentor](https://hub.docker.com/r/phpdoc/phpdoc)
-- # poc-phpdocumentor
+
